@@ -1,4 +1,4 @@
-# <h1 align = "center"> Restaurant Application API </h1>
+# <h1 align = "center"> Job Search Portal API </h1>
 ___ 
 <p align="center">
 <a href="Java url">
@@ -35,68 +35,68 @@ The Restaurant Management Application is a Spring Boot-based web application des
 
 The Controller layer is responsible for handling incoming HTTP requests and delegating them to the appropriate services. It defines API endpoints for the following operations:
 
-1. **Get All Restaurants:** `GET /restaurants`
+1. **Get All JOBS:** `GET /restaurants`
    
    This endpoint retrieves a list of all registered restaurants.
 
    ```java
-   @GetMapping("restaurants")
-   public List<Restaurant> getRestaurants() {
+   @GetMapping("jobs")
+   public List<jobs> getJobs() {
        
    }
    ```
 
-2. **Get Restaurant by ID:** `GET /restaurant/{id}`
+2. **Get JOBS by ID:** `GET /jobs/{id}`
 
-   This endpoint retrieves detailed information about a specific restaurant by its ID.
+   This endpoint retrieves detailed information about a specific jobs by its ID.
 
    ```java
-   @GetMapping("restaurant/{id}")
-   public Restaurant getRestaurant(@PathVariable Integer id) {
+   @GetMapping("jobs/{id}")
+   public Restaurant getJobs(@PathVariable Integer id) {
       
    }
    ```
 
-3. **Add Restaurant:** `POST /restaurant`
+3. **Add JOBS:** `POST /restaurant`
 
    This endpoint adds a new restaurant to the system.
 
    ```java
-   @PostMapping("restaurant")
-   public String addRestaurant(@Valid @RequestBody Restaurant restaurant) {
+   @PostMapping("jobs")
+   public String addRestaurant(@Valid @RequestBody Job job) {
     
    }
    ```
 
-4. **Add Restaurants:** `POST /restaurants`
+4. **Add JOBS:** `POST /jobs`
 
    This endpoint adds multiple restaurants to the system.
 
    ```java
-   @PostMapping("restaurants")
-   public String addRestaurants(@Valid @RequestBody List<Restaurant> restaurants) {
+   @PostMapping("jobs")
+   public String addRestaurants(@Valid @RequestBody List<job> jobs) {
        
    }
    ```
 
-5. **Update Restaurant Specialty:** `PUT /restaurant/id/{id}/specialty/{specialty}`
+5. **Update JOBS pecialty:** `PUT /jobs/id/{id}/specialty/{specialty}`
 
    This endpoint updates the specialty of a restaurant by its ID.
 
    ```java
-   @PutMapping("restaurant/id/{id}/specialty/{updatedSpeciality}")
+   @PutMapping("jobs/id/{id}/specialty/{updatedSpeciality}")
    public String updateSpecialty(@PathVariable Integer id, @RequestParam String updadteSpecial) {
        
    }
    ```
 
-6. **Delete Restaurant:** `DELETE /restaurant/{id}`
+6. **Delete Job:** `DELETE /jobs/{id}`
 
    This endpoint deletes a restaurant by its ID.
 
    ```java
-   @DeleteMapping("restaurant/{id}")
-   public String deleteRestaurant(@PathVariable Integer id) {
+   @DeleteMapping("jobs/{id}")
+   public String deleteJobs(@PathVariable Integer id) {
        
    }
    ```
@@ -117,72 +117,7 @@ The Repository layer manages data access to the underlying database. It handles 
 
 The project's database design includes tables for restaurant management, with fields such as:
 
-### Restaurant Table
-
-| Column Name    | Data Type      | Description                        |
-| -------------- | -------------- | ---------------------------------- |
-| restaurantId   | INT            | Unique identifier for each restaurant |
-| restaurantName | VARCHAR(255)   | Restaurant's name                   |
-| restaurantAddress | VARCHAR(255) | Restaurant's address                |
-| restaurantContact | VARCHAR(12)  | Restaurant's contact number (e.g., 911234567890) |
-| restaurantEmail | VARCHAR(255)  | Restaurant's email address          |
-| restaurantSpecialty | VARCHAR(255) | Restaurant's specialty              |
-| numberOfStaff  | INT            | Number of staff members             |
-| restaurantType | ENUM           | Restaurant type (e.g., FAMILY, CAFE, FAST_FOOD) |
-| created_at     | TIMESTAMP      | Timestamp of record creation        |
-| updated_at     | TIMESTAMP      | Timestamp of record modification    |
-
-The "Restaurant" table stores restaurant-related information, including restaurant IDs, names, addresses, contact information, specialties, staff counts, types, and timestamps for record creation and modification.
-
-This database design ensures data integrity and provides a structured approach to managing restaurant information within the application.
-
-## Data Structures Used
-
-The project utilizes the following data structures:
-
-### Restaurant Class
-
-The `Restaurant` class defines the structure for restaurant data and includes the following fields:
-
-- `restaurantId` (Restaurant ID): An integer that serves as a unique identifier for each restaurant.
-- `restaurantName` (Restaurant Name): A string representing the restaurant's name.
-- `restaurantAddress` (Restaurant Address): A string containing the restaurant's address.
-- `restaurantContact` (Restaurant Contact): A string representing the restaurant's contact number (e.g., 911234567890).
-- `restaurantEmail` (Restaurant Email): A string containing the restaurant's email address.
-- `restaurantSpecialty` (Restaurant Specialty): A string representing the restaurant's specialty.
-- `numberOfStaff` (Number of Staff): An integer indicating the number of staff members.
-- `restaurantType` (Restaurant Type): An enumeration specifying the restaurant type (e.g., FAMILY, CAFE, FAST_FOOD).
-
-### Type Enum
-
-The `Type` enum enumerates the possible restaurant types:
-
-- `FAMILY`: Represents a family restaurant.
-- `CAFE`: Represents a cafe.
-- `FAST_FOOD`: Represents a fast-food restaurant.
-- ...
-
-### ArrayList
-
-The project
-
- utilizes the `ArrayList` data structure to store and manage lists of `Restaurant` objects in various parts of the application. `ArrayList` provides dynamic sizing and efficient element retrieval, making it suitable for storing restaurant records and performing operations on them.
-
-These data structures enable the application to organize and manipulate restaurant data efficiently while maintaining data integrity.
-
-## Project Summary
-
-The Restaurant Management Application is a robust Spring Boot application designed for efficient restaurant data management. It offers a set of RESTful API endpoints for various restaurant-related operations, including adding, retrieving, updating, and deleting restaurant information.
-
-Key Features:
-
-- RESTful API endpoints for restaurant management.
-- Data validation to ensure data integrity.
-- Clean code separation with a layered architecture (Controller, Services, Repository).
-- Robust error handling for improved reliability.
-- Java-based backend and Maven for build management.
-
-The Restaurant Management Application serves as a practical example of Spring Boot application development, demonstrating best practices in API design and restaurant data management. It offers a solid foundation for building and extending restaurant management systems in various applications.
+urant` objects in various parts of the application. `MySQL` provides dynamic sizing and efficient element retrieval, making it suitable for storing jobs
 
 ## License
 
@@ -193,7 +128,7 @@ This project is licensed under the [MIT License](LICENSE).
 Thank you to the Spring Boot and Java communities for providing excellent tools and resources.
 
 ## Contact
-For questions or feedback, please contact [Amit Ashok Swain](mailto:business.amitswain@gmail.com)
+For questions or feedback, please contact [ROHIT SINGH BISHT](rohitbisht3502.com)
 
 
 
